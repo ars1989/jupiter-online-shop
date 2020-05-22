@@ -1,0 +1,35 @@
+<table border="1">
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>productLine</th>
+    <th>quantityInStock</th>
+    <th>productDescription</th>
+    <th>productVendor</th>
+    <th>productScale</th>
+    <th>productName</th>
+    <th>buyPrice</th>
+    <th>textDescription</th>
+    <th>htmlDescription</th>
+    <th>image</th>
+    <th>msrp</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.productLine}}</td>
+    <td>{{product.quantityInStock}}</td>
+    <td>{{product.productDescription}}</td>
+    <td>{{product.productVendor}}</td>
+    <td>{{product.productScale}}</td>
+    <td>{{product.productName}}</td>
+    <td>{{product.buyPrice | currency: 'EUR'}}</td>
+    <td>{{product.textDescription}}</td>
+    <td>{{product.htmlDescription}}</td>
+    <td> <img [src]="product.image" width="250" height="250"></td>
+    <td>{{product.msrp}}</td>
+  </tr>
+  </tbody>
+</table>
+
